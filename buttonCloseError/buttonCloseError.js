@@ -32,8 +32,6 @@
             this.$style = shadowRoot.querySelector('style');
             this.$div = shadowRoot.querySelector('div');
 
-            console.log(this.$selector, this.$errorExists);
-
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
                 this.dispatchEvent(event);
@@ -58,18 +56,6 @@
 
             if ("tooltip" in changedProperties) {
                 this.$tooltip = changedProperties["tooltip"];
-            }
-
-            if ("selector" in changedProperties) {
-                this.$selector = changedProperties["selector"];
-                const errorMessage = document.querySelector(this.$selector);
-                if(errorMessage){
-                    this.$errorExists = true;
-                }
-            }
-
-            if ("errorExists" in changedProperties) {
-                this.$errorExists = changedProperties["errorExists"];
             }
 
             this.render(this.$imageUrl, this.$tooltip);

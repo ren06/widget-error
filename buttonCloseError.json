@@ -1,5 +1,5 @@
 {
-    "id": "com.synvance.button-close-error",
+    "id": "com.synvance.button.close.error",
     "version": "0.0.1",
     "name": "Button Close Error Widget",
     "newInstancePrefix": "ButtonCloseError",
@@ -9,7 +9,7 @@
         {
             "kind": "main",
             "tag": "com-button-close-error",
-            "url": "https://raw.githubusercontent.com/ren06/widget-error/main/buttonCloseError/buttonCloseError.js",
+            "url": "https://ren06.github.io/buttonCloseError/buttonCloseError.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
