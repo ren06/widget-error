@@ -1,0 +1,43 @@
+{
+    "id": "com.synvance.error",
+    "version": "0.0.1",
+    "name": "Error Widget",
+    "newInstancePrefix": "Error",
+    "icon" : "https://aydenowl.github.io/literate-enigma/icon.png",
+    "vendor": "Synvance",
+    "licence": "1.0",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-synvance-error",
+            "url": "https://github.com/ren06/widget-error/error.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "selector": {
+            "type": "string",
+            "description": "DOM Selector",
+            "default": ""
+        }
+    },
+    "methods": {
+        "setDOMSelector": {
+            "description": "Sets the DOM Selector",
+            "parameters": [
+                {
+                    "name": "selector",
+                    "type": "string",
+                    "description": "DOM Selector"
+                }
+            ],
+            "body": "this.selector = selector;"
+        },
+        "getDOMSelectorValue": {
+            "returnType": "string",
+            "description": "Returns HTML element for the selector",
+            "body": "return document.getSelector(this.selector);"
+        }
+    }
+}
