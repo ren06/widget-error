@@ -10,21 +10,15 @@
         {
             "kind": "main",
             "tag": "com-synvance-error",
-            "url": "https://github.com/ren06/widget-error/error.js",
+            "url": "https://raw.githubusercontent.com/ren06/widget-error/main/error/error.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
-    ],
-    "properties": {
-        "selector": {
-            "type": "string",
-            "description": "DOM Selector",
-            "default": ""
-        }
-    },
-    "methods": {
-        "setDOMSelector": {
-            "description": "Sets the DOM Selector",
+    ],   
+    "methods": {        
+        "getDOMSelectorValue": {
+            "returnType": "string",
+            "description": "Returns HTML element for the selector",
             "parameters": [
                 {
                     "name": "selector",
@@ -32,12 +26,7 @@
                     "description": "DOM Selector"
                 }
             ],
-            "body": "this.selector = selector;"
-        },
-        "getDOMSelectorValue": {
-            "returnType": "string",
-            "description": "Returns HTML element for the selector",
-            "body": "return document.getSelector(this.selector);"
+            "body": "return document.getSelector(selector);"
         }
     }
 }
