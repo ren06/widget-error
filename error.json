@@ -4,8 +4,7 @@
     "name": "Error Widget",
     "newInstancePrefix": "Error",
     "icon" : "https://aydenowl.github.io/literate-enigma/icon.png",
-    "vendor": "Synvance",
-    "licence": "1.0",
+    "vendor": "Synvance",    
     "webcomponents": [
         {
             "kind": "main",
@@ -13,20 +12,98 @@
             "url": "https://raw.githubusercontent.com/ren06/widget-error/main/error/error.js",
             "integrity": "",
             "ignoreIntegrity": true
+        },
+        {
+            "kind": "styling",
+            "tag": "com-synvance-imagebutton-sps",
+            "url": "https://aydenowl.github.io/literate-enigma/image_button/image_button_sps.js",
+            "integrity": "",
+            "ignoreIntegrity": true
         }
-    ],   
-    "methods": {        
-        "getDOMSelectorValue": {
-            "returnType": "string",
-            "description": "Returns HTML element for the selector",
+    ],
+    "properties": {
+        "imageUrl": {
+            "type": "string",
+            "description": "URL of the image",
+            "default": "https://aydenowl.github.io/literate-enigma/image_button/bookmark.png"
+        },
+        "tooltip": {
+            "type": "string",
+            "description": "Button tooltip",
+            "default": ""
+        },
+        "width": {
+            "type": "integer",
+            "default": 100
+        },
+        "height": {
+            "type": "integer",
+            "default": 100
+        },
+        "selector": {
+            "type": "string",
+            "description": "Selector",
+            "default": ""
+        },
+        "errorExists": {
+            "type": "boolean",
+            "description": "True if error, false if none",
+            "default": false
+        }
+    },  
+    "methods": { 
+        "setImageUrl": {
+            "description": "Sets the image URL.",
             "parameters": [
                 {
-                    "name": "selector",
+                    "name": "newUrl",
+                    "type": "string",
+                    "description": "Image's URL"
+                }
+            ],
+            "body": "this.imageUrl = newUrl;"
+        },
+        "setTooltip": {
+            "description": "Sets the tooltip's text.",
+            "parameters": [
+                {
+                    "name": "newText",
+                    "type": "string",
+                    "description": "Tooltip's text"
+                }
+            ],
+            "body": "this.tooltip = newText;"
+        },
+        "getImageUrl": {
+            "returnType": "string",
+            "description": "Returns the image's URL.",
+            "body": "return this.imageUrl;"
+        },
+        "getTooltip": {
+            "returnType": "string",
+            "description": "Returns the tooltip's text.",
+            "body": "return this.tooltip;"
+        },   
+        "setQuerySelector": {           
+            "description": "Set selector",
+            "parameters": [
+                {
+                    "name": "sel",
                     "type": "string",
                     "description": "DOM Selector"
                 }
             ],
-            "body": "return document.getSelector(selector);"
+            "body": "this.selector = sel;"
+        },       
+        "isErrorExists": {      
+            "returnType": "boolean",     
+            "description": "Return error status",           
+            "body": "return this.errorExists;"
         }
-    }
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the button."        
+        }
+    }           
 }
