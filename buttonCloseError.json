@@ -1,15 +1,15 @@
 {
-    "id": "com.synvance.error",
+    "id": "com.synvance.button-close-error",
     "version": "0.0.1",
-    "name": "Error Widget",
-    "newInstancePrefix": "Error",
+    "name": "Button Close Error Widget",
+    "newInstancePrefix": "ButtonCloseError",
     "icon" : "https://aydenowl.github.io/literate-enigma/icon.png",
     "vendor": "Synvance",    
     "webcomponents": [
         {
             "kind": "main",
-            "tag": "com-synvance-error",
-            "url": "https://raw.githubusercontent.com/ren06/widget-error/main/error/error.js",
+            "tag": "com-button-close-error",
+            "url": "https://raw.githubusercontent.com/ren06/widget-error/main/buttonCloseError/buttonCloseError.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
